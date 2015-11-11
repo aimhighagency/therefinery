@@ -1,0 +1,448 @@
+@import "compass";
+@import "_reset";
+@import "_fonts";
+@import "_icons";
+@import "_base";
+
+/* BASIC STYLES
+-------------------------------------------------------------- */
+*{
+  @include box-sizing('border-box');
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+body{
+  font: 16px/1.5 $font_main;
+  background-color: $page_bg;  
+  color: $color_main;
+}
+
+a{
+  @include transition;
+  color: $color_accent;
+  text-decoration: none;
+  
+  &:hover{
+    color: $color_main;
+  }
+}
+
+
+ul,
+ul.menu,
+ul.menu li{
+  list-style: none;
+  text-align: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+li a.active,
+li.opened span.nolink{color: $color_main;}
+
+h1, h2, h3{
+  font-family: $font_header;
+}
+
+
+/* Layout
+-------------------------------------------------------------- */
+#header-main{
+  @include transition;
+  background-color: lighten($color_main_lt, 3%);
+  position: fixed;
+  top: -200px;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: $header_height;
+  line-height: $header_height;
+
+  .inner{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+
+  @include bp(s){
+    padding: 20px 0;
+    top: -400px;
+    text-align: center;
+  }
+
+}
+
+body.nav-open{
+  #header-main{
+    top: 0;
+  }
+}
+
+
+#logo{
+  position: absolute;
+  width: 100px;
+  left: 0;
+  bottom: -100px;
+  
+  a{
+    display: block;
+  }
+
+  @include bp(s){
+   position: relative;
+   bottom: auto;
+   width: 50px;
+   margin: auto;
+   height: 60px;
+  }
+}
+
+
+#nav-main{
+  @include pie-clearfix;
+  text-transform: uppercase;
+
+  ul{
+    text-align: center;
+
+    li{
+      display: inline-block;
+    }
+
+    a{
+      display: block;
+      padding-left: $gutter / 2;
+      padding-right: $gutter / 2;
+      //font-family: $font_header;
+      position: relative;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: normal;
+      color: $color_main;
+
+
+
+      span.num{
+        font-family: $font_fancy;
+        position: relative;
+        font-size: 24px;
+        margin-right: 5px;
+        top: 3px;
+      }
+
+      &:hover{
+        span.item{
+          border-bottom: 2px solid $color_accent;
+        }
+
+      }
+
+      &.active{}
+    }
+
+    @include bp(s){
+      padding: 20px;
+      text-align: center !important;
+      float: none;
+
+      li{
+        display: block;
+
+        a{
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+
+  .social-icons{
+    float: right;
+
+    a{
+      padding-left: $gutter / 2;
+      padding-right: $gutter / 2;
+    }
+
+    @include bp(m){
+      float: none;
+    }
+  }
+}
+
+
+.menu-toggle{
+  @include transition;
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  color: $color_main;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+
+  &:hover{
+    color: $color_accent;
+  }
+
+  @include bp(m){
+    display: block;
+  }
+}
+
+#content-main{
+  margin-top: $header_height;
+
+  @include bp(m){
+    margin-top: 0;
+  }
+}
+
+.fancy{
+  font-family: $font_fancy;
+  font-size: 58px;
+  max-width: 850px;
+  text-align: center;
+  margin: 20px auto 40px;
+  line-height: normal;
+
+  .med{
+    font-size: 40px;
+  }
+}
+
+
+
+
+/* -----------------------------------------------------------
+    SECTIONS
+-------------------------------------------------------------- */
+section{
+  margin-bottom: 80px;
+  position: relative;
+  
+  .header{
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+
+    .logo{
+      width: 50px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    h1{
+      @include inline-block;
+      font-size: 36px;
+      position: relative;
+      line-height: normal;
+    }
+
+    .tri-left,
+    .tri-right{
+      width: 40px;
+      position: absolute;
+      top: 22px;
+    }
+
+    .tri-left{
+      left: -60px;
+    }
+
+    .tri-right{
+      right: -60px;
+    }
+  }
+
+  .header + .fancy{
+    margin-top: 0;
+  }
+
+  .body{
+    text-align: justify;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  p{
+    margin-bottom: 20px;
+  }
+}
+
+.divider{
+  max-width: 300px;
+  height: 2px;
+  background-color: $color_main;
+  margin: 40px auto;
+  position: relative;
+
+  span{
+    @include border-radius(2px);
+    width: 4px;
+    height: 4px;
+    background-color: $color_main;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+
+
+
+/* INTRO
+-------------------------------------------------------------- */
+#intro{
+  min-height: 100vh;
+  text-align: center;
+
+  .inner{
+    
+  }
+
+  .logo{
+    width: 400px;
+    margin: auto;
+  }
+}
+
+
+.krumo-root{
+  z-index: 1000;
+}
+
+.service-links{
+
+  li{
+    @include inline-block;
+  }
+}
+
+/* QUOTE 1
+-------------------------------------------------------------- */
+#quote-1{
+  text-align: center;
+  overflow: hidden;
+  padding: 200px 0;
+
+  .inner{
+    position: relative;
+    z-index: 100;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .quote{
+    @extend .fancy;
+    font-size: 40px;
+  }
+
+  .author{
+    font-family: $font_header;
+    font-size: 20px;
+    text-align: left;
+    text-align: center;
+  }
+
+  .bg{
+    background-color: $color_main_lt;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -60%;
+    z-index: 1;
+  }
+}
+
+
+/* IT IS NOT
+-------------------------------------------------------------- */
+#it-is-not{
+  background-color: $color_main_lt;
+  padding: 80px 0;
+  height: 80vh;
+  overflow: hidden;
+
+  .logo-left,
+  .logo-right{
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    margin-top: -320px;
+  }
+
+  .logo-left{
+    left: -150px;
+  }
+
+  .logo-right{
+    right: -150px;
+  }
+}
+
+
+/* EXPRESSION
+-------------------------------------------------------------- */
+#about-expression{
+
+  .body{
+    max-width: 400px;
+  }
+}
+
+
+
+/* BEAR
+-------------------------------------------------------------- */
+#bear{
+  height: 80vh;
+  margin-bottom: 150px;
+  @include bg_cover("../images/The-Refinery-bear.jpg");
+
+  .bg{
+    @include border-radius(60vh);
+    background-color: $color_main_lt;
+    width: 120vh;
+    height: 120vh;
+    position: absolute;
+    top: -20vh;
+    left: 50%;
+    margin-left: -60vh;
+    z-index: -1;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* EXTRAS
+-------------------------------------------------------------- */
+.text-center{
+  text-align: center !important;
+}
+
+
+
+

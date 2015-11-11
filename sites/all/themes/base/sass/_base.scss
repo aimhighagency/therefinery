@@ -1,0 +1,93 @@
+/* VARS 
+-------------------------------------------------------------- */
+$main_width:      1200px;
+$body_pad:			20px;
+$gutter:				20px;
+$header_height:	120px;
+
+$bp_lg:           1400px;
+$bp_med:          1080px;
+$bp_sm:           700px;
+
+/*  COLORS  */
+$color_main:         #222;                 
+$color_accent:       #51702C;              
+$color_main_lt:      #E4E2DE;
+$color_error:        #b54747;
+$color_warning:      #f0da72;
+
+$page_bg:            #F1F0EE;
+$page_med:           darken($page_bg, 5%);
+$page_lt:            #405858;
+$page_dark:          #2b3232;
+
+/*  TYPOGROPHY */
+$font_main:					'Quattrocento Sans', sans-serif;
+$font_header:				'Bebas Neue', sans-serif;
+$font_fancy:        		'BodoniFLF', serif;
+
+$font_weight_lt:         100;
+$font_weight_reg:        400;
+$font_weight_bold:       700;
+
+/*  TRANSITIONS  */
+$trans:	  					.3s;
+$default-transition-property : all;
+$default-transition-duration : .3s;
+$default-transition-function : false;
+$default-transition-delay    : false;
+
+$default-box-shadow-color: #111;
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 0px;
+$default-box-shadow-blur: 3px;
+
+/* MIX-INS 
+-------------------------------------------------------------- */
+@mixin bp($point) {
+  @if $point == l {
+    @media (max-width: $bp_lg) { @content; }
+  }
+  @else if $point == m {
+    @media (max-width: $bp_med) { @content; }
+  }
+  @else if $point == s {
+    @media (max-width: $bp_sm)  { @content; }
+  }
+}
+
+@mixin bg_cover($url){
+	background: url($url) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+/* PLACEHOLDERS & EXTENDS
+-------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
