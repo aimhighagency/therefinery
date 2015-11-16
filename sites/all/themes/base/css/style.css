@@ -489,82 +489,88 @@ body.nav-open #header-main {
 
 /* line 202, ../sass/style.scss */
 #content-main {
-  margin-top: 120px; }
+  margin-top: 120px;
+  padding: 0;
+  margin: 0; }
 @media (max-width: 1080px) {
   /* line 202, ../sass/style.scss */
   #content-main {
     margin-top: 0; } }
 
-/* line 210, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 .fancy, #quote-1 .quote {
   font-family: "BodoniFLF", serif;
-  font-size: 58px;
-  max-width: 850px;
+  font-size: 36px;
+  max-width: 700px;
   text-align: center;
   margin: 20px auto 40px;
   line-height: normal; }
-/* line 218, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 .fancy .med, #quote-1 .quote .med {
   font-size: 40px; }
 
 /* -----------------------------------------------------------
     SECTIONS
 -------------------------------------------------------------- */
-/* line 229, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 section {
   margin-bottom: 80px;
   position: relative; }
-/* line 233, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 section .header {
   text-align: center;
   position: relative;
-  margin-bottom: 40px; }
-/* line 238, ../sass/style.scss */
+  margin-bottom: 20px; }
+/* line 242, ../sass/style.scss */
 section .header .logo {
   width: 50px;
   margin: auto;
   margin-bottom: 20px; }
-/* line 244, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 section .header h1 {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
-  font-size: 36px;
+  font-size: 64px;
   position: relative;
   line-height: normal; }
-/* line 251, ../sass/style.scss */
-section .header .tri-left, section .header .tri-right {
+/* line 254, ../sass/style.scss */
+section .header h1:after, section .header h1:before {
   width: 40px;
   position: absolute;
-  top: 22px; }
-/* line 258, ../sass/style.scss */
-section .header .tri-left {
-  left: -60px; }
+  top: 32px;
+  height: 7px;
+  content: " "; }
 /* line 262, ../sass/style.scss */
-section .header .tri-right {
-  right: -60px; }
+section .header h1:before {
+  left: -60px;
+  background: url(../images/The-Refinery-tri-left.svg); }
 /* line 267, ../sass/style.scss */
+section .header h1:after {
+  right: -60px;
+  background: url(../images/The-Refinery-tri-right.svg); }
+/* line 275, ../sass/style.scss */
 section .header + .fancy, section #quote-1 .header + .quote, #quote-1 section .header + .quote {
   margin-top: 0; }
-/* line 271, ../sass/style.scss */
+/* line 279, ../sass/style.scss */
 section .body {
   text-align: justify;
   max-width: 400px;
   margin: auto; }
-/* line 277, ../sass/style.scss */
+/* line 285, ../sass/style.scss */
 section p {
   margin-bottom: 20px; }
 
-/* line 282, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 .divider {
   max-width: 300px;
   height: 2px;
   background-color: #222;
   margin: 40px auto;
   position: relative; }
-/* line 289, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 .divider span {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -578,92 +584,199 @@ section p {
   left: 50%;
   margin-left: -2px; }
 
-/* INTRO
--------------------------------------------------------------- */
-/* line 307, ../sass/style.scss */
-#intro {
-  min-height: 100vh;
-  text-align: center; }
-/* line 315, ../sass/style.scss */
-#intro .logo {
-  width: 400px;
-  margin: auto; }
+/* line 311, ../sass/style.scss */
+.divider.up span {
+  top: -2px; }
 
-/* line 322, ../sass/style.scss */
-.krumo-root {
-  z-index: 1000; }
-
-/* line 328, ../sass/style.scss */
-.service-links li {
+/* line 316, ../sass/style.scss */
+.sign {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
   *zoom: 1;
-  *display: inline; }
+  *display: inline;
+  text-align: center;
+  border: #222 2px solid;
+  padding: 5px; }
+/* line 322, ../sass/style.scss */
+.sign .inner {
+  border: #222 1px solid;
+  padding: 10px 20px; }
+
+/* INTRO
+-------------------------------------------------------------- */
+/* line 332, ../sass/style.scss */
+#intro {
+  height: 80vh;
+  text-align: center; }
+/* line 338, ../sass/style.scss */
+#intro .inner {
+  height: 100%;
+  position: relative; }
+/* line 343, ../sass/style.scss */
+#intro .logo {
+  width: 600px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -200px; }
+/* line 353, ../sass/style.scss */
+#intro h2 {
+  font-family: "BodoniFLF", serif;
+  font-size: 36px;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: 80px; }
+/* line 364, ../sass/style.scss */
+#intro .arrow {
+  width: 20px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: 180px;
+  opacity: 0; }
 
 /* QUOTE 1
 -------------------------------------------------------------- */
-/* line 335, ../sass/style.scss */
+/* line 381, ../sass/style.scss */
 #quote-1 {
   text-align: center;
-  overflow: hidden;
   padding: 200px 0; }
-/* line 340, ../sass/style.scss */
+/* line 386, ../sass/style.scss */
 #quote-1 .inner {
   position: relative;
   z-index: 100;
   max-width: 500px;
   margin: 0 auto; }
-/* line 347, ../sass/style.scss */
+/* line 393, ../sass/style.scss */
 #quote-1 .quote {
   font-size: 40px; }
-/* line 352, ../sass/style.scss */
+/* line 398, ../sass/style.scss */
 #quote-1 .author {
   font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
   text-align: left;
   text-align: center; }
-/* line 359, ../sass/style.scss */
+/* line 405, ../sass/style.scss */
 #quote-1 .bg {
+  transform: rotate(-10deg) skew(-10deg);
+  transform-origin: center;
   background-color: #E4E2DE;
-  width: 120%;
+  background: url(../images/pattern-1.jpg) repeat fixed;
+  width: 101.6%;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 50%;
-  margin-left: -60%;
+  left: -15px;
   z-index: 1; }
+
+/* WISDOM STYLE
+-------------------------------------------------------------- */
+/* line 423, ../sass/style.scss */
+#wisdom-style {
+  position: relative; }
+/* line 426, ../sass/style.scss */
+#wisdom-style .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: 1200px; }
+/* line 433, ../sass/style.scss */
+#wisdom-style .style {
+  position: absolute; }
+/* line 437, ../sass/style.scss */
+#wisdom-style .style-1 {
+  width: 60%;
+  top: 50%;
+  margin-top: -42%;
+  left: 0;
+  opacity: .9; }
+/* line 445, ../sass/style.scss */
+#wisdom-style .style-2 {
+  width: 35%;
+  top: 50%;
+  margin-top: -32%;
+  right: 0;
+  opacity: .7; }
+/* line 453, ../sass/style.scss */
+#wisdom-style .style-3 {
+  width: 40%;
+  top: 50%;
+  margin-top: 6%;
+  left: 40px;
+  opacity: .7; }
+/* line 461, ../sass/style.scss */
+#wisdom-style .quote {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  margin-left: -40%;
+  margin-top: -10%; }
 
 /* IT IS NOT
 -------------------------------------------------------------- */
-/* line 374, ../sass/style.scss */
+/* line 473, ../sass/style.scss */
 #it-is-not {
   background-color: #E4E2DE;
-  padding: 80px 0;
-  height: 80vh;
-  overflow: hidden; }
-/* line 380, ../sass/style.scss */
+  min-height: 800px;
+  overflow: hidden;
+  position: relative;
+  background: #E4E2DE url(../images/pattern-1.jpg) repeat fixed; }
+/* line 480, ../sass/style.scss */
+#it-is-not .holder {
+  display: table;
+  width: 100%;
+  height: 800px; }
+/* line 486, ../sass/style.scss */
+#it-is-not .inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  position: relative; }
+/* line 493, ../sass/style.scss */
 #it-is-not .logo-left, #it-is-not .logo-right {
   position: absolute;
   width: 300px;
   top: 50%;
   margin-top: -320px; }
-/* line 388, ../sass/style.scss */
+/* line 501, ../sass/style.scss */
 #it-is-not .logo-left {
   left: -150px; }
-/* line 392, ../sass/style.scss */
+/* line 505, ../sass/style.scss */
 #it-is-not .logo-right {
   right: -150px; }
+/* line 509, ../sass/style.scss */
+#it-is-not .bar {
+  position: absolute;
+  background-color: #222;
+  opacity: 1;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  transform: rotate(45deg);
+  transform-origin: center; }
+/* line 522, ../sass/style.scss */
+#it-is-not .bar.right {
+  transform: rotate(-45deg); }
 
-/* IT IS NOT
+/* EXPRESSION
 -------------------------------------------------------------- */
-/* line 402, ../sass/style.scss */
+/* line 532, ../sass/style.scss */
 #about-expression .body {
   max-width: 400px; }
 
 /* BEAR
 -------------------------------------------------------------- */
-/* line 411, ../sass/style.scss */
+/* line 541, ../sass/style.scss */
 #bear {
   height: 80vh;
   margin-bottom: 150px;
@@ -671,24 +784,129 @@ section p {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  overflow-x: hidden; }
-/* line 417, ../sass/style.scss */
+  background-size: cover; }
+/* line 546, ../sass/style.scss */
 #bear .bg {
+  position: absolute;
+  top: -20vh;
+  width: 100%;
+  height: 120vh;
+  overflow: hidden;
+  z-index: -1; }
+/* line 554, ../sass/style.scss */
+#bear .bg .inner {
   -moz-border-radius: 60vh;
   -webkit-border-radius: 60vh;
   border-radius: 60vh;
   background-color: #E4E2DE;
+  background: url(../images/pattern-1.jpg) repeat fixed;
   width: 120vh;
   height: 120vh;
   position: absolute;
-  top: -20vh;
+  top: 0;
   left: 50%;
   margin-left: -60vh;
-  z-index: -1; }
+  text-transform: uppercase; }
+
+/* SEXY-STUFF
+-------------------------------------------------------------- */
+/* line 574, ../sass/style.scss */
+#sexy-stuff {
+  height: 100vh;
+  width: 100%;
+  display: table; }
+/* line 579, ../sass/style.scss */
+#sexy-stuff .inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
+/* line 585, ../sass/style.scss */
+#sexy-stuff img {
+  width: 800px;
+  height: auto;
+  margin: 0 auto; }
+
+/* SERVICES
+-------------------------------------------------------------- */
+/* line 594, ../sass/style.scss */
+#services {
+  padding: 80px 0;
+  background: #E4E2DE url(../images/pattern-1.jpg) repeat fixed;
+  text-align: center; }
+
+/* line 600, ../sass/style.scss */
+.list-box {
+  text-align: center; }
+/* line 607, ../sass/style.scss */
+.list-box h2 {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-family: "BodoniFLF", serif;
+  font-size: 90px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: transparent solid 2px;
+  line-height: 80px;
+  margin-bottom: 20px; }
+/* line 617, ../sass/style.scss */
+.list-box h2:hover {
+  border-bottom: #51702C solid 2px; }
+/* line 622, ../sass/style.scss */
+.list-box .body {
+  display: none; }
+
+/* CTA 1
+-------------------------------------------------------------- */
+/* line 630, ../sass/style.scss */
+#cta-1 {
+  position: relative;
+  padding: 100px 0;
+  height: 1200px; }
+/* line 635, ../sass/style.scss */
+#cta-1 .quote {
+  position: absolute;
+  width: 80%;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  margin-left: -40%;
+  margin-top: -140px; }
+
+/* line 646, ../sass/style.scss */
+.cycle-gallery {
+  position: absolute;
+  max-width: 900px;
+  margin-left: -450px;
+  margin-top: -300px;
+  top: 50%;
+  left: 50%;
+  z-index: 1; }
+/* line 655, ../sass/style.scss */
+.cycle-gallery li {
+  position: absolute;
+  top: 0;
+  left: 0; }
+/* line 661, ../sass/style.scss */
+.cycle-gallery img {
+  opacity: .7; }
 
 /* EXTRAS
 -------------------------------------------------------------- */
-/* line 443, ../sass/style.scss */
+/* line 672, ../sass/style.scss */
 .text-center {
   text-align: center !important; }
+
+/* line 675, ../sass/style.scss */
+.krumo-root {
+  z-index: 1000; }
+
+/* line 681, ../sass/style.scss */
+.service-links li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline; }

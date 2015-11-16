@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * @file
  * Initiates a browser-based installation of Drupal.

@@ -201,6 +201,10 @@ body.nav-open{
 
 #content-main{
   margin-top: $header_height;
+  //width: 100vw;
+  //overflow: hidden;
+  padding: 0;
+  margin: 0;
 
   @include bp(m){
     margin-top: 0;
@@ -209,8 +213,8 @@ body.nav-open{
 
 .fancy{
   font-family: $font_fancy;
-  font-size: 58px;
-  max-width: 850px;
+  font-size: 36px;
+  max-width: 700px;
   text-align: center;
   margin: 20px auto 40px;
   line-height: normal;
@@ -233,7 +237,7 @@ section{
   .header{
     text-align: center;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 
     .logo{
       width: 50px;
@@ -243,25 +247,29 @@ section{
 
     h1{
       @include inline-block;
-      font-size: 36px;
+      font-size: 64px;
       position: relative;
       line-height: normal;
+
+      &:after, &:before{
+        width: 40px;
+        position: absolute;
+        top: 32px;
+        height: 7px;
+        content: " ";
+      }
+
+      &:before{
+        left: -60px;
+        background: url(../images/The-Refinery-tri-left.svg);
+      }
+
+      &:after{
+        right: -60px;
+        background: url(../images/The-Refinery-tri-right.svg);
+      }
     }
 
-    .tri-left,
-    .tri-right{
-      width: 40px;
-      position: absolute;
-      top: 22px;
-    }
-
-    .tri-left{
-      left: -60px;
-    }
-
-    .tri-right{
-      right: -60px;
-    }
   }
 
   .header + .fancy{
@@ -299,43 +307,81 @@ section{
   }
 }
 
+.divider.up{
+  span{
+    top: -2px;
+  }
+}
+
+.sign{
+  @include inline-block;
+  text-align: center;
+  border: $color_main 2px solid;
+  padding: 5px;
+
+  .inner{
+    border: $color_main 1px solid;
+    padding: 10px 20px;
+  }
+}
 
 
 
 /* INTRO
 -------------------------------------------------------------- */
 #intro{
-  min-height: 100vh;
+  height: 80vh;
   text-align: center;
+ 
+
 
   .inner{
-    
+    height: 100%;
+    position: relative;
   }
 
   .logo{
-    width: 400px;
+    width: 600px;
     margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -200px;
+  }
+
+  h2{
+    font-family: $font_fancy;
+    font-size: 36px;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: 80px;
+    
+  }
+
+  .arrow{
+    width: 20px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: 180px;
+    opacity: 0;
   }
 }
 
 
-.krumo-root{
-  z-index: 1000;
-}
 
-.service-links{
-
-  li{
-    @include inline-block;
-  }
-}
 
 /* QUOTE 1
 -------------------------------------------------------------- */
 #quote-1{
   text-align: center;
-  overflow: hidden;
   padding: 200px 0;
+
 
   .inner{
     position: relative;
@@ -357,25 +403,92 @@ section{
   }
 
   .bg{
+    transform: rotate(-10deg) skew(-10deg);
+    transform-origin: center;
+    //transform: skew(-10deg);
     background-color: $color_main_lt;
-    width: 120%;
+    background: url(../images/pattern-1.jpg) repeat fixed;
+    width: 101.6%;
     height: 100%;
     position: absolute;
     top: 0;
-    left: 50%;
-    margin-left: -60%;
+    left: -15px;
     z-index: 1;
   }
 }
 
 
+/* WISDOM STYLE
+-------------------------------------------------------------- */
+#wisdom-style{
+  position: relative;
+
+  .inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    height: 1200px;
+  }
+  
+  .style{
+    position: absolute;
+  }
+  
+  .style-1{
+    width: 60%;
+    top: 50%;
+    margin-top: -42%;
+    left: 0;
+    opacity: .9;
+  }
+
+  .style-2{
+    width: 35%;
+    top: 50%;
+    margin-top: -32%;
+    right: 0;
+    opacity: .7;
+  }
+
+  .style-3{
+    width: 40%;
+    top: 50%;
+    margin-top: 6%;
+    left: 40px;
+    opacity: .7;
+  }
+
+  .quote{
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    margin-left: -40%;
+    margin-top: -10%;
+  }
+}
+
 /* IT IS NOT
 -------------------------------------------------------------- */
 #it-is-not{
   background-color: $color_main_lt;
-  padding: 80px 0;
-  height: 80vh;
+  min-height: 800px;
   overflow: hidden;
+  position: relative;
+  background: $color_main_lt url(../images/pattern-1.jpg) repeat fixed;
+
+  .holder{
+    display: table;
+    width: 100%;
+    height: 800px;
+  }
+
+  .inner{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    position: relative;
+  }
 
   .logo-left,
   .logo-right{
@@ -391,6 +504,23 @@ section{
 
   .logo-right{
     right: -150px;
+  }
+
+  .bar{
+    position: absolute;
+    background-color: $color_main;
+    opacity: 1;
+    width: 10px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+
+  .bar.right{
+    transform: rotate(-45deg);
   }
 }
 
@@ -414,25 +544,125 @@ section{
   @include bg_cover("../images/The-Refinery-bear.jpg");
 
   .bg{
-    @include border-radius(60vh);
-    background-color: $color_main_lt;
-    width: 120vh;
-    height: 120vh;
     position: absolute;
     top: -20vh;
-    left: 50%;
-    margin-left: -60vh;
+    width: 100%;
+    height: 120vh;
+    overflow: hidden;
     z-index: -1;
+
+    .inner{
+      @include border-radius(60vh);
+      background-color: $color_main_lt;
+      background: url(../images/pattern-1.jpg) repeat fixed;
+      width: 120vh;
+      height: 120vh;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -60vh;
+      
+      text-transform: uppercase;
+    }
 
   }
 }
 
 
+/* SEXY-STUFF
+-------------------------------------------------------------- */
+#sexy-stuff{
+  height: 100vh;
+  width: 100%;
+  display: table;
+
+  .inner{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  img{
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+/* SERVICES
+-------------------------------------------------------------- */
+#services{
+  padding: 80px 0;
+  background: $color_main_lt url(../images/pattern-1.jpg) repeat fixed;
+  text-align: center;
+}
+
+.list-box{
+  text-align: center;
+
+  .item{
+    
+  }
+  
+  h2{
+    @include inline-block;
+    font-family: $font_fancy;
+    font-size: 90px;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: transparent solid 2px;
+    line-height: 80px;
+    margin-bottom: 20px;
+
+    &:hover{
+      border-bottom: $color_accent solid 2px;
+    }
+  }
+
+  .body{
+    display: none;
+  }
+}
 
 
+/* CTA 1
+-------------------------------------------------------------- */
+#cta-1{
+  position: relative;
+  padding: 100px 0;
+  height: 1200px;
 
+  .quote{
+    position: absolute;
+    width: 80%;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    margin-left: -40%;
+    margin-top: -140px;
+  }
+}
 
+.cycle-gallery{
+  position: absolute;
+  max-width: 900px;
+  margin-left: -450px;
+  margin-top: -300px;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
 
+  li{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  img{
+    opacity: .7;
+  }
+
+}
 
 
 
@@ -442,7 +672,16 @@ section{
 .text-center{
   text-align: center !important;
 }
+.krumo-root{
+  z-index: 1000;
+}
 
+.service-links{
+
+  li{
+    @include inline-block;
+  }
+}
 
 
 
