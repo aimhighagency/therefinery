@@ -1,4 +1,3 @@
-
 <header id="header-main">
 	<div class="inner">
 		<div id="logo"><a href="/"><img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-Logo_owl-circle.svg" alt="The Refinery Logo"></a></div>
@@ -37,7 +36,8 @@
 					<div class="quote">“Style is something each of us already has, all we need to do is find it.”</div>
 					<div class="author">~ Diane von Fürstenberg</div>
 				</div>
-				<div class="bg"></div>
+				<div class="bg-top"></div>
+				<div class="bg-bottom"></div>
 			</section>
 
 			<section id="who">
@@ -87,9 +87,9 @@
 							<h1>It's not about style</h1>
 						</div>
 						
-						
 						<div class="body">
 							<p>It’s been said that when you look good, you feel good. Our philosophy, however, can be summed up with one all-important amendment to that—</p>
+							<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 						</div>
 
 						<div class="fancy">
@@ -214,6 +214,7 @@
 
 			<section id="cta-1">
 				<div class="inner">
+					<div class="fancy text-center">So...</div>
 					<div class="cycle-gallery">
 						<ul>
 							<li><img src="/<?php echo path_to_theme(); ?>/images/style/The-Refinery-style-4.jpg" alt=""></li>
@@ -224,6 +225,47 @@
 						</ul>
 					</div>
 					<div class="quote"><img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-find-style.svg" alt=""></div>
+					<div class="arrow"><img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-arrow-down.svg" alt=""></div>
+				</div>
+			</section>
+
+			<section id="contact">
+				<div class="inner">
+					<div class="header">
+						<div class="logo"><img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-Logo_owl-circle.svg" alt=""></div>
+						<h1>Get in touch</h1>
+					</div>
+					
+					<div class="body">
+						<p>Ready to get started? Have a few more questions? Just wana tell us a joke? (We always like a good joke.) Then drop us a line. </p>
+						<p class="text-center">We're here to help, chat, laugh.</p>
+					</div>
+					<div class="fancy">
+						<div class="email"><a href="mailto:hello@therefinery.la">hello@therefinery.la</a></div> 
+						<div class="phone">(323) 987-6543</div>
+						<div class="social-icons">
+							<a href="" class="icon-facebook"></a>
+							<a href="" class="icon-twitter"></a>
+							<a href="" class="icon-instagram"></a>
+							<a href="" class="icon-pinterest"></a>
+						</div>
+					</div>
+					<div class="divider"><span></span></div>
+				</div>
+			</section>
+
+			<section id="instagram">
+				<div class="inner">
+					<div class="header">
+						<div class="fancy text-center">And yes...</div>
+						<h1>We have an instagram</h1>
+					</div>
+					<div class="insta-feed">
+						<?php
+							$block = module_invoke('instagram_block', 'block_view', 'instagram_block');
+							print render($block);
+						?>
+					</div>
 				</div>
 			</section>
 
@@ -239,6 +281,6 @@
 	</div>
 
 	<div class="copy">
-		&copy; <?php echo date('Y') . ' ' . $site_name; ?>
+		&copy; <?php echo date('Y'); ?> The Refinery LA &mdash; Don't Steal. It's not nice.
 	</div>
 </footer>

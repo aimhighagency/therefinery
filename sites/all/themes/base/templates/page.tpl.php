@@ -1,18 +1,15 @@
-
 <header id="header-main">
-	<div id="inner">
-		<div id="logo"><a href="/">LOGO HERE</a></div>
+	<div class="inner">
+		<div id="logo"><a href="/"><img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-Logo_owl-circle.svg" alt="The Refinery Logo"></a></div>
 		
 		<nav id="nav-main">
-			<div id="inner">
-				<ul>
-					<li><a href=""><span>1.</span>Who are we?</a></li>
-					<li><a href=""><span>2.</span>What we do</a></li>
-					<li><a href=""><span>3.</span>Whay we do it</a></li>
-					<li><a href=""><span>4.</span>Some other stuff</a></li>
-					<li><a href=""><span>5.</span>Let's get started</a></li>
-				</ul>
-			</div>
+			<ul>
+				<li><a href=""><span class="num">1.</span><span class="item">Who are we?</span></a></li>
+				<li><a href=""><span class="num">2.</span><span class="item">What we do</span></a></li>
+				<li><a href=""><span class="num">3.</span><span class="item">Whay we do it</span></a></li>
+				<li><a href=""><span class="num">4.</span><span class="item">Some other stuff</span></a></li>
+				<li><a href=""><span class="num">5.</span><span class="item">Let's get started</span></a></li>
+			</ul>
 		</nav> <!-- END #nav -->
 
 		<div class="menu-toggle icon-list"></div>
@@ -36,6 +33,21 @@
 		<div id="content">
 			<?php print render($page['content']); ?>
 		</div>
+
+		<section id="instagram">
+			<div class="inner">
+				<div class="header">
+					<div class="fancy text-center">And yes...</div>
+					<h1>We have an instagram</h1>
+				</div>
+				<div class="insta-feed">
+					<?php
+						$block = module_invoke('instagram_block', 'block_view', 'instagram_block');
+						print render($block);
+					?>
+				</div>
+			</div>
+		</section>
 	</div>
 </div>
 
@@ -46,13 +58,7 @@
 		<div class="footer-right"><?php print render($page['footer_right']); ?></div>		
 	</div>
 
-	<div class="social-icons">
-		<a href="http://twitter.com/" class="icon-twitter" target="_blank"></a>
-		<a href="http://instagram.com/" class="icon-instagram" target="_blank"></a>
-		<a href="http://pinterest" class="icon-pinterest" target="_blank"></a>
-	</div> <!-- END .social-icons -->
-
 	<div class="copy">
-		&copy; <?php echo date('Y') . ' ' . $site_name; ?>
+		&copy; <?php echo date('Y'); ?> The Refinery LA &mdash; Don't Steal. It's not nice.
 	</div>
 </footer>

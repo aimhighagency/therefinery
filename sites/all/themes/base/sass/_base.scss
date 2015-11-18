@@ -68,7 +68,9 @@ $default-box-shadow-blur: 3px;
 
 /* PLACEHOLDERS & EXTENDS
 -------------------------------------------------------------- */
-
+%bg_pattern{
+  background: $color_main_lt url(../images/pattern-1.jpg) repeat fixed;
+}
 
 
 

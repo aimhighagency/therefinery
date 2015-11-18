@@ -9,6 +9,13 @@ stylesheets[all][] = css/style.css
 
 ; JS
 scripts[] = js/jquery.imagesloaded.min.js
+
+scripts[] = js/ScrollMagic.js
+scripts[] = js/easing-min.js
+scripts[] = js/TweenMax.js
+scripts[] = js/debug.addIndicators.js
+scripts[] = js/animation.gsap.js
+scripts[] = js/scrollIt.min.js
 ;scripts[] = js/jquery.masonry.min.js
 ;scripts[] = js/skrollr.js
 scripts[] = js/init.js
