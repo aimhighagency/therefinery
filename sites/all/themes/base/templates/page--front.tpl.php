@@ -67,15 +67,16 @@
 					<div class="style style-1">
 						<img src="/<?php echo path_to_theme(); ?>/images/style/The-Refinery-style-1.jpg" alt="">
 					</div>
+					<div class="quote">
+						<img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-style-wisdom.svg" alt="">
+					</div>
 					<div class="style style-2">
 						<img src="/<?php echo path_to_theme(); ?>/images/style/The-Refinery-style-2.jpg" alt="">
 					</div>
 					<div class="style style-3">
 						<img src="/<?php echo path_to_theme(); ?>/images/style/The-Refinery-style-3.jpg" alt="">
 					</div>
-					<div class="quote">
-						<img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-style-wisdom.svg" alt="">
-					</div>
+					
 				</div>
 			</section>
 
@@ -145,9 +146,9 @@
 						Because nothing’s sexier than authenticity. 
 					</div>
 
-					<div class="body text-center">
-						<p>Beside maybe motorcycles.</p>
-						<p>And samurai swords.</p>
+					<div class="body">
+						<p class="text-center">Beside maybe motorcycles.</p>
+						<p class="text-center">And samurai swords.</p>
 					</div>
 					<div class="divider"><span></span></div>
 				</div>
@@ -215,6 +216,7 @@
 			<section id="cta-1">
 				<div class="inner">
 					<div class="fancy text-center">So...</div>
+					<div class="quote"><img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-find-style.svg" alt=""></div>
 					<div class="cycle-gallery">
 						<ul>
 							<li><img src="/<?php echo path_to_theme(); ?>/images/style/The-Refinery-style-4.jpg" alt=""></li>
@@ -224,7 +226,7 @@
 							<li><img src="/<?php echo path_to_theme(); ?>/images/style/The-Refinery-style-8.jpg" alt=""></li>
 						</ul>
 					</div>
-					<div class="quote"><img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-find-style.svg" alt=""></div>
+					
 					<div class="arrow"><img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-arrow-down.svg" alt=""></div>
 				</div>
 			</section>

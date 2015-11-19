@@ -10,6 +10,9 @@ Drupal.behaviors.init = {
 				return false;
 			});
 
+ 			// BLOG IMAGE
+ 			//===================================
+ 			$('.body .image').parent().addClass('image-holder');
 
 			// INTRO
  			//===================================
@@ -57,7 +60,7 @@ Drupal.behaviors.init = {
  				$('.cycle-gallery .index-' + cycle_last).fadeOut(200);
  			}
 
- 			setInterval(nextCycle, 1000);
+ 			//setInterval(nextCycle, 1000);
 
 
 
@@ -82,6 +85,10 @@ Drupal.behaviors.init = {
 
 		   var logo_main = new ScrollMagic.Scene({triggerElement: "#intro", duration: "40%"})
         .setTween("#intro .logo", {'opacity': 0, ease: Linear.easeNone})
+        .addTo(onLeaveController);
+
+        var logo_main = new ScrollMagic.Scene({triggerElement: "#intro", duration: "40%"})
+        .setTween("#intro h2", {'margin-top': 180, ease: Linear.easeNone})
         .addTo(onLeaveController);
 
         var logo_main = new ScrollMagic.Scene({triggerElement: "#intro", duration: "30%"})

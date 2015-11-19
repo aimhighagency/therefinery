@@ -6,8 +6,8 @@
 */
 
 function custom_view_mode_entity_info_alter(&$entity_info) {
-  $entity_info['node']['view modes']['featured'] = array(
-    'label' => t('Featured'),
+  $entity_info['node']['view modes']['teaser_small'] = array(
+    'label' => t('Teaser Small'),
     'custom settings' => TRUE,
   );
 }

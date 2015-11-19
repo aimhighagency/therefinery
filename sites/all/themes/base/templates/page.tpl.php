@@ -18,6 +18,9 @@
 
 <div id="content-main">
 	<div class="inner">
+
+		<div class="logo-blog"><img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-Logo_blog.svg" alt="The Refinery Logo"></div>
+
 		<?php if(isset($messages)): ?>
 			<div id="messages"><?php echo $messages; ?></div>
 		<?php endif; ?>
@@ -33,6 +36,31 @@
 		<div id="content">
 			<?php print render($page['content']); ?>
 		</div>
+
+		<section id="contact">
+			<div class="inner">
+				<div class="header">
+					<div class="logo"><img src="/<?php echo path_to_theme(); ?>/images/The-Refinery-Logo_owl-circle.svg" alt=""></div>
+					<h1>Get in touch</h1>
+				</div>
+				
+				<div class="body">
+					<p>Ready to get started? Have a few more questions? Just wana tell us a joke? (We always like a good joke.) Then drop us a line. </p>
+					<p class="text-center">We're here to help, chat, laugh.</p>
+				</div>
+				<div class="fancy">
+					<div class="email"><a href="mailto:hello@therefinery.la">hello@therefinery.la</a></div> 
+					<div class="phone">(323) 987-6543</div>
+					<div class="social-icons">
+						<a href="" class="icon-facebook"></a>
+						<a href="" class="icon-twitter"></a>
+						<a href="" class="icon-instagram"></a>
+						<a href="" class="icon-pinterest"></a>
+					</div>
+				</div>
+				<div class="divider"><span></span></div>
+			</div>
+		</section>
 
 		<section id="instagram">
 			<div class="inner">

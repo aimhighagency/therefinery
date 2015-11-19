@@ -1,17 +1,15 @@
 <div class="article full">
-	<div class="meta-data">
-		<div class="post-date"><?php print $post_date; ?></div>
-		<div class="comment-count"><?php echo $comment_count; ?></div>
+	
+	<div class="cover"><?php print $cover_image; ?></div>
+
+	<div class="meta">
+		<div class="section"><?php print $section; ?></div>
+		<span class="bull">&bull;</span>
+		<div class="created"><?php print $created; ?></div> 
 	</div>
+	<h1><?php print $title; ?></h1>
 
 	<div class="body"><?php print $body; ?></div>
-
-	<div class="tags">
-		<div class="tags">
-			<h2>Tags : </h2>
-			<?php print $tags; ?>
-		</div>
-	</div>
 
 	<div class="share-post">
 		<h2>Share this post</h2>

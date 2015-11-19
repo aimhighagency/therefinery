@@ -134,12 +134,13 @@ function base_preprocess_node(&$vars){
 		$vars['tags'] =  render($vars['content']['field_tags']);
 		$vars['summary'] = render($vars['content']['body']);
 		$vars['service_links'] =  render($vars['content']['service_links']);
+		$vars['section'] =  render($vars['content']['field_section']);
 		$vars['comment_count'] = l('Comments ' . $vars['comment_count'], $url . '#comments');
 		$vars['path'] = $url;
 
 		if($vars['view_mode'] == 'teaser'){
 			//$vars['title'] = l($vars['title'], $url);
-			$vars['cover_image'] = l($vars['cover_image'], $url, array('html'=>TRUE));
+			//$vars['cover_image'] = l($vars['cover_image'], $url, array('html'=>TRUE));
 			$read_more = l(' — read more', $url);
 			$summary_text = render($vars['content']['body']);
 			$vars['summary'] = $summary_text;

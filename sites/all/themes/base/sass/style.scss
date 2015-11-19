@@ -220,7 +220,15 @@ body.nav-open{
   line-height: normal;
 
   .med{
-    font-size: 40px;
+    font-size: 30px;
+  }
+
+  @include bp(s){
+    font-size: 24px;
+
+    .med{
+      font-size: 20px;
+    }
   }
 }
 
@@ -268,7 +276,18 @@ section{
         right: -60px;
         background: url(../images/The-Refinery-tri-right.svg);
       }
+
+      @include bp(s){
+        font-size: 30px;
+
+        &:after, &:before{
+          display: none;
+        }
+
+      }
     }
+
+
 
   }
 
@@ -284,6 +303,14 @@ section{
 
   p{
     margin-bottom: 20px;
+  }
+
+  @include bp(s){
+    padding: 0 20px;
+
+    p{
+      text-align: left;
+    }
   }
 }
 
@@ -340,6 +367,10 @@ section{
   position: relative;
   z-index: 100;
 
+  @include bp(s){
+    height: auto;
+  }
+
 
   .inner{
     height: 100%;
@@ -354,6 +385,17 @@ section{
     left: 50%;
     margin-left: -300px;
     margin-top: -200px;
+
+    @include bp(s){
+      width: 100%;
+      padding: 0 10px;
+      position: relative;
+      top: auto;
+      left: 0;
+      margin-left: 0;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
   }
 
   h2{
@@ -364,6 +406,13 @@ section{
     top: 50%;
     left: 0;
     margin-top: 80px;
+
+    @include bp(s){
+      position: relative;
+      top: auto;
+      margin-top: 0;
+      font-size: 24px;
+    }
     
   }
 
@@ -376,6 +425,12 @@ section{
     margin-left: -10px;
     margin-top: 180px;
     opacity: 0;
+
+    @include bp(s){
+      position: relative;
+      top: auto;
+      margin-top: 40px !important;
+    }
   }
 }
 
@@ -394,6 +449,11 @@ section{
   position: relative;
   z-index: 1;
 
+
+  @include bp(s){
+    padding: 300px 20px;
+  }
+
   .inner{
     position: relative;
     z-index: 100;
@@ -404,6 +464,10 @@ section{
   .quote{
     @extend .fancy;
     font-size: 40px;
+
+    @include bp(s){
+      font-size: 24px;
+    }
   }
 
   .author{
@@ -456,6 +520,7 @@ section{
   
   .style{
     position: absolute;
+    z-index: 1;
   }
   
   .style-1{
@@ -489,6 +554,24 @@ section{
     left: 50%;
     margin-left: -40%;
     margin-top: -10%;
+    z-index: 100;
+  }
+
+  @include bp(s){
+    padding: 0 10px;
+    height: auto;
+
+    .inner{
+      height: auto;
+    }
+
+    .style-1, .style-2, .style-3, .quote{
+      position: relative;
+      width: 100%;
+      left: 0;
+      right: auto;
+      margin: 0 !important;
+    }
   }
 }
 
@@ -520,6 +603,11 @@ section{
     width: 300px;
     top: 50%;
     margin-top: -320px;
+    
+    @include bp(s){
+      display: none;
+    }
+
   }
 
   .logo-left{
@@ -543,6 +631,10 @@ section{
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     transform-origin: center;
+
+    @include bp(s){
+      display: none;
+    }
   }
 
   .bar.right{
@@ -568,9 +660,11 @@ section{
 /* BEAR
 -------------------------------------------------------------- */
 #bear{
+  @include bg_cover("../images/The-Refinery-bear.jpg");
   height: 80vh;
   margin-bottom: 150px;
-  @include bg_cover("../images/The-Refinery-bear.jpg");
+  padding: 0;
+ 
 
   .bg{
     position: absolute;
@@ -593,7 +687,25 @@ section{
       
       text-transform: uppercase;
     }
+  }
 
+  @include bp(s){
+    height: 50vh;
+    background-position: center right;
+
+    .bg{
+     
+      height: 80vh;
+      width: 100%;
+      top: -15vh;
+
+      .inner{
+        width: 80vh;
+        height: 80vh;
+        top: 0;
+        margin-left: -40vh;
+      }
+    }
   }
 }
 
@@ -601,18 +713,16 @@ section{
 /* SEXY-STUFF
 -------------------------------------------------------------- */
 #sexy-stuff{
-  height: 100vh;
-  width: 100%;
-  display: table;
+  max-width: 100%;
+  padding: 100px 10px;
 
   .inner{
-    display: table-cell;
-    vertical-align: middle;
     text-align: center;
+    width: 100%;
   }
 
   img{
-    width: 800px;
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
   }
@@ -646,10 +756,20 @@ section{
     &:hover{
       border-bottom: $color_accent solid 2px;
     }
+  
+    @include bp(s){
+      font-size: 50px;
+      line-height: 40px;
+    }
+
   }
 
   .body{
     display: none;
+
+    @include bp(s){
+      padding: 20px;
+    }
   }
 }
 
@@ -662,6 +782,11 @@ section{
   height: 1200px;
   margin-bottom: 100px;
 
+  @include bp(s){
+    height: auto;
+    //padding: 0;
+  }
+
   .quote{
     position: absolute;
     width: 80%;
@@ -670,6 +795,15 @@ section{
     left: 50%;
     margin-left: -40%;
     margin-top: -140px;
+
+    @include bp(s){
+      width: 100%;
+      padding: 10px;
+      position: relative;
+      top: auto !important;
+      left: 0;
+      margin: 0 !important;
+    }
   }
 
   .arrow{
@@ -681,22 +815,35 @@ section{
     margin-left: -20px;
     margin-top: 320px;
     //opacity: 0;
+    //
+    @include bp(s){
+      width: 20px;
+      position: relative;
+      left: auto;
+      top: auto !important;
+      margin-top: 0 !important;
+      margin: 40px auto !important;
+    }
   }
 }
 
 .cycle-gallery{
-  position: absolute;
+  //position: absolute;
   max-width: 900px;
-  margin-left: -450px;
-  margin-top: -300px;
-  top: 50%;
-  left: 50%;
+  margin: 0 auto;
   z-index: 1;
+  position: relative;
+
+  @include bp(s){
+    height: 66vw;
+    padding: 0;
+  }
 
   li{
     position: absolute;
     top: 0;
     left: 0;
+    max-width: 100%;
   }
 
   img{
@@ -710,7 +857,8 @@ section{
 -------------------------------------------------------------- */
 #contact{
   @extend %bg_pattern;
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
 
   .header{
     .logo{
@@ -756,6 +904,13 @@ section{
       float: none;
     }
   }
+
+  @include bp(s){
+    a{
+      width: 50%;
+      padding: 2px;
+    }
+  }
 }
 
 
@@ -774,24 +929,118 @@ section{
 
 /* BLOG
 -------------------------------------------------------------- */
-.article.teaser{
-  max-width: 900px;
+.logo-blog{
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.page-blog{
+  .logo-blog{
+    max-width: 700px;
+    margin: 80px auto;
+  }
+}
+
+.node-type-article{
+  #page-title{
+    display: none;
+  }
+}
+
+.article{
+  max-width: 1200px;
   padding-bottom: 20px;
   margin: 0 auto 80px;
   border-bottom: $color_main_lt solid 4px;
-
-  h2{
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
 
   .meta{
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .section,
+  .bull,
+  .created{
+    @include inline-block;
+  }
+}
+
+.article.full{
+  padding: 10px;
+  padding-bottom: 40px;
+
+  .cover{
+    margin-bottom: 20px;
+  }
+
+  h1{
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h2{
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 30px;
+  }
+
+  .meta{
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  p{
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  p.image-holder{
+    max-width: 900px;
+    line-height: 0;
+  }
+
+  .share-post{
+    text-align: center;
+  }
+
+  .service-links{
+
+    a{
+      font-size: 30px;
+      margin: 10px;
+    }
+  }
+
+}
+
+.article.teaser{
+   max-width: 900px;
+
+  .cover{
+    line-height: 0;
+    margin-bottom: 15px;
+    a{
+      display: block;
+    }
+  }
+
+  h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+    letter-spacing: .5px;
+  }
+
+  
+
+  .bull{
+    margin: 0 10px;
   }
 
   .full{
+    @include transition;
     margin-right: 20px;
     @include inline-block;
 
@@ -801,6 +1050,13 @@ section{
       text-transform: uppercase;
       background-color: $color_main;
       color: $page_bg;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 2px;
+
+      &:hover{
+        background-color: $color_accent;
+      }
     }
   }
 
@@ -812,6 +1068,28 @@ section{
       margin-right: 10px;
     }
   }
+}
+
+.teaser-small{
+  @include pie-clearfix;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+
+  .views-row{
+    max-width: 33%;
+    float: left;
+    padding: 20px;
+
+    h2{
+      font-size: 20px;
+      line-height: normal;
+    }
+  }
+}
+
+h2.pane-title{
+  font-size: 40px;
+  text-align: center;
 }
 
 
